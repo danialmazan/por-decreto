@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: '3.12'
       # Caché de respuestas (no versionada): evita volver a pedir cada semana las legislaturas y los años cerrados.
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6.1.0
         with:
           path: data/raw/cache
           key: fuentes-${{ github.run_id }}
