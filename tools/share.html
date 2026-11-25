@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- Póster para compartir (1200×630) y portada del catálogo de danielalmazan.com (1000×600 a 2×).
+     Lo renderiza tools/social.sh con Chrome headless; lee los datos reales de public/data. -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: "Schibsted Grotesk Variable"; font-weight: 400 900;
+  src: url("../node_modules/@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2") format("woff2"); }
+:root { --bg: #f3f6f4; --ink: #102a3a; --muted: #4e6470; --hair: #d3ddd7; --trace: #0e5a8a; --pen: #e8a100; --hl: #b57800;
+  --p-ucd: #1f9a8a; --p-psoe: #d5373e; --p-pp: #2a62c9; }
+* { box-sizing: border-box; margin: 0; }
+html, body { width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: "Schibsted Grotesk Variable", system-ui, sans-serif;
+  display: grid; grid-template-rows: auto auto auto 1fr auto; padding: 5.2vh 4.6vw 4.4vh; overflow: hidden; }
+.brand { display: flex; align-items: center; gap: 1.2vw; font-weight: 800; font-size: 4.3vh; letter-spacing: -.01em; }
+.brand svg { width: 5.6vh; height: 5.6vh; }
+h1 { font-size: 9.4vh; line-height: 1; font-weight: 800; letter-spacing: -.03em; margin-top: 4.6vh; max-width: 15em; }
+p.sub { font-size: 3.5vh; color: var(--muted); margin-top: 2.2vh; max-width: 34em; line-height: 1.3; }
+#chart { margin-top: 3.4vh; min-height: 0; }
+#chart svg { display: block; width: 100%; height: 100%; }
+footer { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--hair); padding-top: 1.8vh;
+  font-size: 2.8vh; color: var(--muted); }
+footer b { color: var(--hl); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="brand">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#102a3a"/><path d="M3 15h4l2-6 3 9 2-5h3" fill="none" stroke="#f3f6f4" stroke-width="1.8" stroke-linejoin="round"/><circle cx="19.5" cy="13" r="2.2" fill="#e8a100"/></svg>
+  Decretómetro
+</div>
+<h1 id="t"></h1>
+<p class="sub" id="s"></p>
+<div id="chart"></div>
+<footer><span id="f"></span><b>danielalmazan.com/decretometro</b></footer>
+<script>
+const lang = new URLSearchParams(location.search).get("lang") === "en" ? "en" : "es";
+const T = {
+  es: { t: "El decreto-ley en la democracia española", s: "Cuántos reales decretos-leyes ha aprobado cada Gobierno desde 1978, cuándo y qué ha hecho después el Congreso.",
+        f: "Decretos-leyes en los últimos 30 días, día a día · Datos: BOE y Congreso" },
+  en: { t: "Decree-laws in Spanish democracy", s: "How many royal decree-laws each Spanish government has approved since 1978, when, and what Congress did next.",
+        f: "Decree-laws in the previous 30 days, day by day · Data: BOE and Congress" },
+}[lang];
+document.documentElement.lang = lang;
+t.textContent = T.t; s.textContent = T.s; f.textContent = T.f;
+const COL = { UCD: "var(--p-ucd)", PSOE: "var(--p-psoe)", PP: "var(--p-pp)" };
+const day = (iso) => Math.round(Date.parse(iso + "T00:00:00Z") / 864e5);
+
+// Con file:// Chrome sólo permite XMLHttpRequest (no fetch), y necesita --allow-file-access-from-files.
+const leer = (n) => new Promise((ok, ko) => {
+  const x = new XMLHttpRequest(); x.open("GET", `../public/data/${n}.json`);
+  x.onload = () => ok(JSON.parse(x.responseText)); x.onerror = ko; x.send();
+});
+Promise.all(["serie", "gobiernos"].map(leer)).then(([serie, govs]) => {
+  const box = chart.getBoundingClientRect(), W = box.width, H = box.height;
+  const d0 = day(serie.inicio), n = serie.n, N = n.length;
+  // Ventana móvil de 30 días, como en la web, reducida a un punto por semana (máximo de la semana).
+  const r30 = []; let acc = 0;
+  for (let i = 0; i < N; i++) { acc += n[i] - (i >= 30 ? n[i - 30] : 0); r30.push(acc); }
+  const pts = []; for (let i = 0; i < N; i += 7) pts.push([i, Math.max(...r30.slice(i, i + 7))]);
+  pts.push([N - 1, r30[N - 1]]);
+  const ymax = Math.max(...r30), strip = H * 0.035, top = strip + H * 0.05;
+  const X = (i) => (i / (N - 1)) * (W - 14), Y = (v) => H - (v / ymax) * (H - top);
+  const line = pts.map(([i, v], k) => `${k ? "L" : "M"}${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join("");
+  const bandas = govs.map((g) => {
+    const a = Math.max(day(g.inicio) - d0, 0), b = g.fin ? day(g.fin) - d0 : N - 1;
+    if (b < 0) return "";
+    return `<rect x="${X(a)}" y="0" width="${Math.max(X(b) - X(a) - 1.5, 1)}" height="${strip}" fill="${COL[g.partidos[0]] ?? "var(--muted)"}"/>`;
+  }).join("");
+  const last = pts.at(-1);
+  chart.innerHTML = `<svg viewBox="0 0 ${W} ${H}">${bandas}
+    <path d="${line}L${X(N - 1)},${H}L0,${H}Z" fill="var(--trace)" opacity=".14"/>
+    <path d="${line}" fill="none" stroke="var(--trace)" stroke-width="${H / 160}" stroke-linejoin="round"/>
+    <circle cx="${X(last[0])}" cy="${Y(last[1])}" r="${H / 30}" fill="var(--pen)" stroke="var(--bg)" stroke-width="${H / 120}"/></svg>`;
+  document.body.dataset.ready = "1";
+});
+</script>
+</body>
+</html>
