@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decretómetro · dirección B «Pulso»</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23102a3a'/%3E%3Cpath d='M3 15h4l2-6 3 9 2-5h3' fill='none' stroke='%23eef3f0' stroke-width='1.8' stroke-linejoin='round'/%3E%3Ccircle cx='19.5' cy='13' r='2.2' fill='%23e8a100'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root { --bg:#f3f6f4; --ink:#102a3a; --muted:#4e6470; --hair:#d3ddd7; --paper-line:#dfe7e2; --band:rgba(16,42,58,.07); --seg-bg:#e4ebe7;
+  --trace:#0e5a8a; --hl:#c98600; --pen:#e8a100; --focus:#0e5a8a;
+  --f-head:"Schibsted Grotesk", system-ui, sans-serif; --f-body:"Schibsted Grotesk", system-ui, sans-serif; --w-head:800; }
+:root[data-theme="dark"] { --bg:#0e1518; --ink:#e4eef0; --muted:#9db0b8; --hair:#26343a; --paper-line:#1a262b; --band:rgba(228,238,240,.07); --seg-bg:#172328; --trace:#5fb3e8; --hl:#f0b429; --pen:#f0b429; --focus:#5fb3e8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0e1518; --ink:#e4eef0; --muted:#9db0b8; --hair:#26343a; --paper-line:#1a262b; --band:rgba(228,238,240,.07); --seg-bg:#172328; --trace:#5fb3e8; --hl:#f0b429; --pen:#f0b429; --focus:#5fb3e8; } }
+
+.hero { margin: 0 -16px; padding: 22px 16px 10px; position: relative;
+  background-image: linear-gradient(var(--paper-line) 1px, transparent 1px), linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+  background-size: 24px 24px; border-bottom: 1px solid var(--hair); }
+.reading { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; }
+.reading .big { font-weight: 800; font-size: clamp(88px, 22vw, 168px); line-height: .82; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.reading .what { font-size: clamp(18px, 3.6vw, 24px); font-weight: 600; line-height: 1.2; max-width: 16ch; padding-bottom: 6px; }
+.reading .what small { display: block; font-weight: 400; color: var(--muted); font-size: 15px; margin-top: 6px; }
+.flag { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--ink); background: var(--pen); color: #1b1200;
+  border-radius: 999px; padding: 3px 10px 3px 8px; font-size: 13px; margin-top: 14px; }
+.flag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #1b1200; }
+.hero .chart { margin-top: 10px; }
+.hero .trace { stroke-width: 1.6; }
+.hero .rec { fill: var(--pen); r: 6; }
+@keyframes ping { from { r: 6; opacity: .8; } to { r: 22; opacity: 0; } }
+.ping { fill: none; stroke: var(--pen); stroke-width: 2; animation: ping 1.8s ease-out 3; }
+h2 { letter-spacing: -.01em; }
+.chart .grid { stroke: var(--paper-line); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">Decretómetro <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="var(--ink)"/><path d="M3 15h4l2-6 3 9 2-5h3" fill="none" stroke="var(--bg)" stroke-width="1.8" stroke-linejoin="round"/><circle cx="19.5" cy="13" r="2.2" fill="var(--pen)"/></svg></a>
+  <div class="tools">
+    <nav class="lang" aria-label="Idioma"><a href="#" aria-current="true" lang="es" title="Español">ES</a><a href="#" lang="en" title="English">EN</a></nav>
+    <button class="theme" data-theme-toggle aria-label="Cambiar tema claro u oscuro" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <div class="reading">
+      <span class="big" id="big"></span>
+      <span class="what">decretos-leyes en los últimos 30 días<small id="when"></small></span>
+    </div>
+    <span class="flag" id="flag" hidden>Récord desde 1978</span>
+    <div class="chart" id="tl"></div>
+  </div>
+  <div class="seg" data-seg id="seg-tl" role="group" aria-label="Agregación temporal" style="margin-top:12px">
+    <button data-v="m30" aria-pressed="true">Últimos 30 días</button><button data-v="anual" aria-pressed="false">Año natural</button>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="cols">
+    <section>
+      <h2>Con las Cortes disueltas</h2>
+      <p class="lede" id="fin-txt"></p>
+      <div class="chart" id="fin"></div>
+      <p class="note">Decretos-leyes acumulados desde 365 días antes de cada disolución. Franja: hasta las elecciones.</p>
+    </section>
+    <section>
+      <h2>Intensidad por Gobierno</h2>
+      <p class="lede">Decretos-leyes por año de mandato efectivo. Gobiernos con al menos un año.</p>
+      <div class="chart" id="gov"></div>
+    </section>
+  </div>
+</main>
+<footer>
+  <a class="author" href="https://danielalmazan.com">danielalmazan.com</a>
+  <span class="credit">Daniel Almazán · Datos: <a href="#">BOE y Congreso de los Diputados</a></span>
+  <span class="fbrand">Decretómetro <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="var(--ink)"/><path d="M3 15h4l2-6 3 9 2-5h3" fill="none" stroke="var(--bg)" stroke-width="1.8" stroke-linejoin="round"/><circle cx="19.5" cy="13" r="2.2" fill="var(--pen)"/></svg></span>
+</footer>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script>
+const F = Charts.frases(), d = DL.destacados;
+document.getElementById("big").textContent = d.ultimos_30d;
+document.getElementById("when").textContent = `hasta el ${Charts.fmt(DL.corte)} · ${d.total} desde 1978`;
+if (d.ultimos_30d >= d.record_30d.valor) document.getElementById("flag").hidden = false;
+document.getElementById("kpis").innerHTML = [
+  [d.ultimos_365d, "en los últimos 365 días"], [String(d.media_anual_historica).replace(".", ","), "media anual desde 1978"],
+  [d.total, "decretos-leyes en total"], [d.record_dia, "récord en un solo día (23 jun 2000)"],
+].map(([v, t]) => `<div class="kpi"><b>${v}</b><span>${t}</span></div>`).join("");
+document.getElementById("fin-txt").textContent = F.fin;
+let mode = "m30";
+function pen() {
+  const s = document.querySelector("#tl svg"), c = s && s.querySelector(".rec");
+  if (!c || mode !== "m30") return;
+  const p = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  p.setAttribute("cx", c.getAttribute("cx")); p.setAttribute("cy", c.getAttribute("cy")); p.setAttribute("r", 6); p.setAttribute("class", "ping");
+  s.insertBefore(p, c);
+}
+const draw = () => { Charts.timeline(document.getElementById("tl"), mode); pen(); Charts.finMandato(document.getElementById("fin")); Charts.govBars(document.getElementById("gov")); };
+document.getElementById("seg-tl").addEventListener("seg", (e) => { mode = e.detail; Charts.timeline(document.getElementById("tl"), mode); pen(); });
+Charts.wireControls(); draw(); addEventListener("resize", draw);
+</script>
+</body>
+</html>

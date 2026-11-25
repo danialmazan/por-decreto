@@ -1,0 +1,178 @@
+{
+ "puntos": [
+  {
+   "gobierno_id": "suarez_2",
+   "pct_escanos": 47.14,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 31.761,
+   "dias": 92,
+   "n": 8
+  },
+  {
+   "gobierno_id": "suarez_3",
+   "pct_escanos": 48.0,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 17.817,
+   "dias": 697,
+   "n": 34
+  },
+  {
+   "gobierno_id": "calvo_sotelo",
+   "pct_escanos": 48.0,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 20.985,
+   "dias": 644,
+   "n": 37
+  },
+  {
+   "gobierno_id": "gonzalez_1",
+   "pct_escanos": 57.71,
+   "mayoria_absoluta": true,
+   "tipo": "monocolor",
+   "media_anualizada": 10.71,
+   "dias": 1330,
+   "n": 39
+  },
+  {
+   "gobierno_id": "gonzalez_2",
+   "pct_escanos": 52.57,
+   "mayoria_absoluta": true,
+   "tipo": "monocolor",
+   "media_anualizada": 6.231,
+   "dias": 1231,
+   "n": 21
+  },
+  {
+   "gobierno_id": "gonzalez_3",
+   "pct_escanos": 50.0,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 8.352,
+   "dias": 1312,
+   "n": 30
+  },
+  {
+   "gobierno_id": "gonzalez_4",
+   "pct_escanos": 45.43,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 13.83,
+   "dias": 1030,
+   "n": 39
+  },
+  {
+   "gobierno_id": "aznar_1",
+   "pct_escanos": 44.57,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 21.367,
+   "dias": 1453,
+   "n": 85
+  },
+  {
+   "gobierno_id": "aznar_2",
+   "pct_escanos": 52.29,
+   "mayoria_absoluta": true,
+   "tipo": "monocolor",
+   "media_anualizada": 10.572,
+   "dias": 1451,
+   "n": 42
+  },
+  {
+   "gobierno_id": "zapatero_1",
+   "pct_escanos": 46.86,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 13.045,
+   "dias": 1456,
+   "n": 52
+  },
+  {
+   "gobierno_id": "zapatero_2",
+   "pct_escanos": 48.29,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 15.174,
+   "dias": 1348,
+   "n": 56
+  },
+  {
+   "gobierno_id": "rajoy_1",
+   "pct_escanos": 53.14,
+   "mayoria_absoluta": true,
+   "tipo": "monocolor",
+   "media_anualizada": 16.041,
+   "dias": 1776,
+   "n": 78
+  },
+  {
+   "gobierno_id": "rajoy_2",
+   "pct_escanos": 39.14,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 18.294,
+   "dias": 579,
+   "n": 29
+  },
+  {
+   "gobierno_id": "sanchez_1",
+   "pct_escanos": 24.29,
+   "mayoria_absoluta": false,
+   "tipo": "monocolor",
+   "media_anualizada": 26.847,
+   "dias": 585,
+   "n": 43
+  },
+  {
+   "gobierno_id": "sanchez_2",
+   "pct_escanos": 44.29,
+   "mayoria_absoluta": false,
+   "tipo": "coalicion",
+   "media_anualizada": 24.886,
+   "dias": 1409,
+   "n": 96
+  },
+  {
+   "gobierno_id": "sanchez_3",
+   "pct_escanos": 43.43,
+   "mayoria_absoluta": false,
+   "tipo": "coalicion",
+   "media_anualizada": 25.099,
+   "dias": 1106,
+   "n": 76
+  }
+ ],
+ "agregados": {
+  "mayoria_absoluta": {
+   "no": {
+    "n": 585,
+    "dias": 11711,
+    "gobiernos": 12,
+    "media_anualizada_ponderada": 18.25
+   },
+   "si": {
+    "n": 180,
+    "dias": 5788,
+    "gobiernos": 4,
+    "media_anualizada_ponderada": 11.36
+   }
+  },
+  "tipo": {
+   "monocolor": {
+    "n": 593,
+    "dias": 14984,
+    "gobiernos": 14,
+    "media_anualizada_ponderada": 14.45
+   },
+   "coalicion": {
+    "n": 172,
+    "dias": 2515,
+    "gobiernos": 2,
+    "media_anualizada_ponderada": 24.98
+   }
+  }
+ }
+}

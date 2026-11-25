@@ -1,0 +1,4 @@
+id,etiqueta,n,dias_exposicion,media_semanal,media_mensual,media_anualizada,max_semana,max_semana_id,max_mes,max_mes_id,max_30d,max_30d_fin,semanas_completas,pct_semanas_sin_rdl,meses_completos,pct_meses_sin_rdl,dias_entre_aprobaciones_media,dias_entre_aprobaciones_mediana,dias_con_rdl
+UCD,UCD,79,1433,0.3859,1.678,20.136,5,1979-W04,6,1979-01,7,1979-01-26,204,74.5,47,19.1,27.2,21.0,53
+PSOE,PSOE,452,10807,0.2928,1.273,15.276,5,2026-W47,14,2026-11,14,2026-11-24,1541,77.0,353,36.5,29.4,20,366
+PP,PP,234,5259,0.3115,1.3543,16.252,6,2000-W25,9,2012-03,10,1997-12-12,749,76.2,171,34.5,28.1,15,181

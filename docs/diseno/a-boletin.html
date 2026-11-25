@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Por decreto · dirección A «Boletín»</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 2h11l3 3v17H5z' fill='%23fff' stroke='%23000' stroke-width='1.6'/%3E%3Cpath d='M8 7h8M8 10h8M8 13h5' stroke='%23000' stroke-width='1.4'/%3E%3Ccircle cx='15' cy='17' r='3.6' fill='none' stroke='%235a3d9a' stroke-width='1.8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root { --bg:#ffffff; --ink:#000000; --muted:#555555; --hair:#d6d6d6; --band:rgba(0,0,0,.055); --seg-bg:#f0f0f0;
+  --trace:#000000; --hl:#5a3d9a; --stamp:#5a3d9a; --focus:#5a3d9a;
+  --f-head:"Old Standard TT", Georgia, serif; --f-body:"Libre Franklin", system-ui, sans-serif; --f-brand:"Old Standard TT", serif; --f-num:"Old Standard TT", serif; }
+:root[data-theme="dark"] { --bg:#161616; --ink:#f2f2f2; --muted:#a9a9a9; --hair:#353535; --band:rgba(255,255,255,.07); --seg-bg:#232323; --trace:#f2f2f2; --hl:#b49cf0; --stamp:#b49cf0; --focus:#b49cf0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#161616; --ink:#f2f2f2; --muted:#a9a9a9; --hair:#353535; --band:rgba(255,255,255,.07); --seg-bg:#232323; --trace:#f2f2f2; --hl:#b49cf0; --stamp:#b49cf0; --focus:#b49cf0; } }
+
+.masthead { margin-top: 20px; border-top: 4px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 8px 0 18px; }
+.mast-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); gap: 12px; }
+.mast-row .num { font-family: var(--f-head); color: var(--ink); font-size: 15px; }
+.masthead h1 { font-family: var(--f-head); font-weight: 700; font-size: clamp(48px, 12vw, 104px); line-height: .95; margin: 14px 0 10px; letter-spacing: -.01em; }
+.masthead p { font-family: var(--f-head); font-style: italic; font-size: clamp(18px, 3.4vw, 24px); margin: 0; max-width: 34ch; }
+.lead { font-size: 19px; max-width: 46ch; margin: 18px 0 0; }
+.lead b { font-family: var(--f-head); font-size: 1.15em; }
+
+.sumario { margin-top: 28px; }
+.sumario h2 { font-size: 20px; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
+.disp { display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; padding: 12px 0; border-bottom: 1px solid var(--hair); align-items: start; }
+.disp { text-decoration: none; color: inherit; }
+.disp .t { font-family: var(--f-head); font-size: 17px; line-height: 1.35; }
+.disp .t b { font-weight: 700; }
+.disp .d { grid-column: 1; font-size: 13px; color: var(--muted); }
+.stamp { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--stamp); border: 2px solid var(--stamp); border-radius: 4px; padding: 3px 7px; transform: rotate(-4deg); opacity: .9; white-space: nowrap; }
+.stamp.derogado { border-style: double; border-width: 4px; }
+section h2 { border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">Por decreto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h11l3 3v17H5z" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.6"/><path d="M8 7h8M8 10h8M8 13h5" stroke="var(--ink)" stroke-width="1.4"/><circle cx="15" cy="17" r="3.6" fill="none" stroke="var(--stamp)" stroke-width="1.8"/></svg></a>
+  <div class="tools">
+    <nav class="lang" aria-label="Idioma"><a href="#" aria-current="true" lang="es" title="Español">ES</a><a href="#" lang="en" title="English">EN</a></nav>
+    <button class="theme" data-theme-toggle aria-label="Cambiar tema claro u oscuro" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<main>
+  <div class="masthead">
+    <div class="mast-row"><span class="num" id="num"></span><span id="fecha"></span></div>
+    <h1>Por decreto</h1>
+    <p>Los reales decretos-leyes de los Gobiernos de España desde la Constitución</p>
+  </div>
+  <p class="lead" id="lead"></p>
+
+  <div class="sumario">
+    <h2>Sumario de los últimos decretos-leyes</h2>
+    <div id="sumario"></div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+    <h2>Cuándo se aprueban</h2>
+    <p class="lede">Cada punto de la línea cuenta los decretos-leyes aprobados en los 30 días anteriores. Las franjas grises marcan los periodos con las Cortes disueltas.</p>
+    <div class="seg" data-seg id="seg-tl" role="group" aria-label="Agregación temporal">
+      <button data-v="m30" aria-pressed="true">Últimos 30 días</button><button data-v="anual" aria-pressed="false">Año natural</button>
+    </div>
+    <div class="chart" id="tl"></div>
+  </section>
+
+  <div class="cols">
+    <section>
+      <h2>Con las Cortes disueltas</h2>
+      <p class="lede" id="fin-txt"></p>
+      <div class="chart" id="fin"></div>
+      <p class="note">Decretos-leyes acumulados desde 365 días antes de cada disolución. Franja gris: hasta las elecciones.</p>
+    </section>
+    <section>
+      <h2>Intensidad por Gobierno</h2>
+      <p class="lede">Decretos-leyes por año de mandato efectivo. Gobiernos con al menos un año.</p>
+      <div class="chart" id="gov"></div>
+    </section>
+  </div>
+</main>
+<footer>
+  <a class="author" href="https://danielalmazan.com">danielalmazan.com</a>
+  <span class="credit">Daniel Almazán · Datos: <a href="#">BOE y Congreso de los Diputados</a></span>
+  <span class="fbrand">Por decreto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h11l3 3v17H5z" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.6"/><path d="M8 7h8M8 10h8M8 13h5" stroke="var(--ink)" stroke-width="1.4"/><circle cx="15" cy="17" r="3.6" fill="none" stroke="var(--stamp)" stroke-width="1.8"/></svg></span>
+</footer>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script>
+const F = Charts.frases(), d = DL.destacados;
+document.getElementById("num").textContent = `Núm. ${d.total}`;
+document.getElementById("fecha").textContent = `Datos hasta el ${Charts.fmt(DL.corte)}`;
+document.getElementById("lead").innerHTML = `<b>${d.ultimos_30d}</b> decretos-leyes en los últimos 30 días, la cifra más alta desde 1978. ${F.record}`;
+const ESTADO = { pendiente: "Pendiente", convalidado: "Convalidado", derogado: "Derogado" };
+document.getElementById("sumario").innerHTML = DL.ultimos.slice(0, 5).map((r) =>
+  `<a class="disp" href="${r.url}"><span class="t"><b>Real Decreto-ley ${r.num}</b>, ${r.titulo}.</span>
+   <span class="d">Aprobado el ${Charts.fmt(r.fecha)}</span><span class="stamp ${r.estado}">${ESTADO[r.estado] || r.estado}</span></a>`).join("");
+document.getElementById("kpis").innerHTML = [
+  [d.total, "desde el 29 de diciembre de 1978"], [String(d.media_anual_historica).replace(".", ","), "de media al año"],
+  [d.ultimos_365d, "en los últimos 365 días"], [d.record_dia, "récord en un solo día (23 jun 2000)"],
+].map(([v, t]) => `<div class="kpi"><b>${v}</b><span>${t}</span></div>`).join("");
+document.getElementById("fin-txt").textContent = F.fin;
+const seg = document.getElementById("seg-tl"); let mode = "m30";
+const draw = () => { Charts.timeline(document.getElementById("tl"), mode); Charts.finMandato(document.getElementById("fin")); Charts.govBars(document.getElementById("gov")); };
+seg.addEventListener("seg", (e) => { mode = e.detail; Charts.timeline(document.getElementById("tl"), mode); });
+Charts.wireControls(); draw(); addEventListener("resize", draw);
+</script>
+</body>
+</html>

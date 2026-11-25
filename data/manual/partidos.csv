@@ -1,0 +1,6 @@
+partido,nombre,familia_color,regex_formacion,nota
+UCD,Unión de Centro Democrático,centro,^(UCD|CC-UCD)$,Incluye Centristes de Catalunya-UCD.
+PSOE,Partido Socialista Obrero Español,psoe,"(PSOE|^PSC|^PSE-EE|PSdeG|PsdeG|^PSG)",Incluye las federaciones y el PSC en candidatura conjunta.
+PP,Partido Popular,pp,"(^PP($|-| )|-PP$|^UPN-PP)",Incluye candidaturas conjuntas (PP-PAR, UPN-PP, PP-EU…). Escaños de la candidatura electoral.
+UP,Unidas Podemos,up,"(^UP$|^ECP|GUANYEM|^GCUP|EN COMÚ|GALICIA EN COMÚN|^EC-UP)",Unidas Podemos y confluencias (En Comú Podem, Galicia en Común).
+SUMAR,Sumar,sumar,^SUMAR,Candidatura Sumar.

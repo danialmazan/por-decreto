@@ -1,0 +1,17 @@
+{
+ "total": 765,
+ "media_anual_historica": 15.97,
+ "ultimos_30d": 14,
+ "ultimos_365d": 49,
+ "gobierno_max_anualizada": {
+  "id": "suarez_2",
+  "valor": 31.761
+ },
+ "record_30d": {
+  "valor": 14,
+  "fecha_fin": "2026-11-25",
+  "empates": 2
+ },
+ "record_dia": 6,
+ "corte": "2026-11-25"
+}

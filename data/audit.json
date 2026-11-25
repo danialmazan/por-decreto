@@ -1,0 +1,1664 @@
+{
+ "meta": {
+  "generado": "2026-11-25T19:35:57",
+  "corte": "2026-11-25",
+  "n_rdl": 765,
+  "ultimo_rdl": "2026-11-24"
+ },
+ "errores": [],
+ "avisos": [
+  {
+   "control": "duplicado_en_fuente_descartado",
+   "detalle": "RDL 16/1982: BOE-A-1982-23818 (se conserva BOE-A-1982-23296)"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1979 rdleg: BOE 0 / Congreso 1"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1980 rdleg: BOE 3 / Congreso 1"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1981 ley: BOE 49 / Congreso 50"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1983 ley: BOE 45 / Congreso 46"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1984 ley_organica: BOE 9 / Congreso 10"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1985 ley: BOE 50 / Congreso 51"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1986 rdleg: BOE 15 / Congreso 1"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1991 ley: BOE 30 / Congreso 31"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1991 ley_organica: BOE 12 / Congreso 13"
+  },
+  {
+   "control": "contraste_est_leyes",
+   "detalle": "1998 ley: BOE 49 / Congreso 50"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "12/1979: 12 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "13/1979: 10 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "14/1979: 10 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "15/1979: 10 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "16/1979: 13 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "17/1979: 14 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "1/1979: 18 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "18/1979: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "50/1978: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "19/1979: 10 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "4/1979: 11 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "5/1979: 11 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "6/1979: 11 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "7/1979: 29 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "6/1980: 13 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "7/1980: 26 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "10/1980: 34 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "2/1980: 20 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "20/1979: 26 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "16/1980: 39 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "13/1981: 9 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "14/1981: 9 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "15/1981: 13 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "3/1981: 15 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "19/1981: 46 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "5/1981: 18 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "6/1981: 11 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "8/1982: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "9/1982: 13 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "10/1982: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "14/1982: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "15/1982: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "16/1982: 19 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "1/1982: 19 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "2/1982: 11 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "5/1982: 14 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "26/1982: 10 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "4/1983: 27 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "4/1984: 14 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "5/1984: 17 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "9/1983: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "2/1984: 17 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "3/1984: 21 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "2/1985: 9 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "1/1986: 12 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "1/1987: 11 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "3/1986: 17 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "5/1988: 24 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "14/1993: 16 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "10/1994: 12 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "22/1993: 9 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "6/1995: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "13/1996: 8 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "4/1996: 15 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "12/1997: 15 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "13/1997: 15 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "8/1998: 14 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "12/1999: 16 días entre aprobación y publicación"
+  },
+  {
+   "control": "publicacion_tardia",
+   "detalle": "8/2000: 10 días entre aprobación y publicación"
+  },
+  {
+   "control": "registro_diputados_distinto_350",
+   "detalle": "gonzalez_3: 349 diputados de alta el 1989-11-20"
+  },
+  {
+   "control": "registro_diputados_distinto_350",
+   "detalle": "aznar_1: 348 diputados de alta el 1996-03-26"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "33/2026 (2026-11-10, convalidado)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "34/2026 (2026-11-10, convalidado)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "35/2026 (2026-11-10, convalidado)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "36/2026 (2026-11-10, convalidado)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "37/2026 (2026-11-17, pendiente)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "38/2026 (2026-11-17, pendiente)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "39/2026 (2026-11-17, pendiente)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "40/2026 (2026-11-20, pendiente)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "41/2026 (2026-11-20, pendiente)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "42/2026 (2026-11-24, pendiente)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "43/2026 (2026-11-24, pendiente)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "44/2026 (2026-11-24, pendiente)"
+  },
+  {
+   "control": "rdl_sin_expediente_congreso",
+   "detalle": "45/2026 (2026-11-24, pendiente)"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "21/1982 BOE-A-1982-29684"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "24/1982 BOE-A-1982-34943"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "25/1982 BOE-A-1982-34944"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "2/1983 BOE-A-1983-5915"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "4/1984 BOE-A-1984-11235"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "7/1984 BOE-A-1984-13945"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "11/1984 BOE-A-1984-16331"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "9/1983 BOE-A-1984-251"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "1/1984 BOE-A-1984-4885"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "3/1984 BOE-A-1984-9278"
+  },
+  {
+   "control": "tramitado_sin_pl_localizado",
+   "detalle": "2/1987 BOE-A-1987-15437"
+  },
+  {
+   "control": "tramitacion_deducida_de_pl",
+   "detalle": "8/2023 BOE-A-2023-26452"
+  }
+ ],
+ "info": {
+  "rdl_por_anio_numeracion": {
+   "1978": 1,
+   "1979": 22,
+   "1980": 16,
+   "1981": 19,
+   "1982": 26,
+   "1983": 9,
+   "1984": 15,
+   "1985": 8,
+   "1986": 3,
+   "1987": 7,
+   "1988": 7,
+   "1989": 7,
+   "1990": 6,
+   "1991": 5,
+   "1992": 6,
+   "1993": 22,
+   "1994": 13,
+   "1995": 12,
+   "1996": 17,
+   "1997": 29,
+   "1998": 20,
+   "1999": 22,
+   "2000": 10,
+   "2001": 16,
+   "2002": 10,
+   "2003": 7,
+   "2004": 11,
+   "2005": 16,
+   "2006": 13,
+   "2007": 11,
+   "2008": 10,
+   "2009": 14,
+   "2010": 14,
+   "2011": 20,
+   "2012": 29,
+   "2013": 17,
+   "2014": 17,
+   "2015": 12,
+   "2016": 7,
+   "2017": 21,
+   "2018": 28,
+   "2019": 18,
+   "2020": 39,
+   "2021": 32,
+   "2022": 20,
+   "2023": 8,
+   "2024": 11,
+   "2025": 17,
+   "2026": 45
+  },
+  "contraste_est_leyes": [
+   {
+    "anio": 1979,
+    "rango": "rdl",
+    "boe": 22,
+    "congreso": 22
+   },
+   {
+    "anio": 1979,
+    "rango": "ley",
+    "boe": 45,
+    "congreso": 45
+   },
+   {
+    "anio": 1979,
+    "rango": "ley_organica",
+    "boe": 4,
+    "congreso": 4
+   },
+   {
+    "anio": 1979,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 1
+   },
+   {
+    "anio": 1980,
+    "rango": "rdl",
+    "boe": 16,
+    "congreso": 16
+   },
+   {
+    "anio": 1980,
+    "rango": "ley",
+    "boe": 83,
+    "congreso": 83
+   },
+   {
+    "anio": 1980,
+    "rango": "ley_organica",
+    "boe": 13,
+    "congreso": 13
+   },
+   {
+    "anio": 1980,
+    "rango": "rdleg",
+    "boe": 3,
+    "congreso": 1
+   },
+   {
+    "anio": 1981,
+    "rango": "rdl",
+    "boe": 19,
+    "congreso": 19
+   },
+   {
+    "anio": 1981,
+    "rango": "ley",
+    "boe": 49,
+    "congreso": 50
+   },
+   {
+    "anio": 1981,
+    "rango": "ley_organica",
+    "boe": 8,
+    "congreso": 8
+   },
+   {
+    "anio": 1981,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1982,
+    "rango": "rdl",
+    "boe": 26,
+    "congreso": 26
+   },
+   {
+    "anio": 1982,
+    "rango": "ley",
+    "boe": 53,
+    "congreso": 53
+   },
+   {
+    "anio": 1982,
+    "rango": "ley_organica",
+    "boe": 13,
+    "congreso": 13
+   },
+   {
+    "anio": 1982,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 1983,
+    "rango": "rdl",
+    "boe": 9,
+    "congreso": 9
+   },
+   {
+    "anio": 1983,
+    "rango": "ley",
+    "boe": 45,
+    "congreso": 46
+   },
+   {
+    "anio": 1983,
+    "rango": "ley_organica",
+    "boe": 14,
+    "congreso": 14
+   },
+   {
+    "anio": 1983,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 1984,
+    "rango": "rdl",
+    "boe": 15,
+    "congreso": 15
+   },
+   {
+    "anio": 1984,
+    "rango": "ley",
+    "boe": 53,
+    "congreso": 53
+   },
+   {
+    "anio": 1984,
+    "rango": "ley_organica",
+    "boe": 9,
+    "congreso": 10
+   },
+   {
+    "anio": 1984,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 1985,
+    "rango": "rdl",
+    "boe": 8,
+    "congreso": 8
+   },
+   {
+    "anio": 1985,
+    "rango": "ley",
+    "boe": 50,
+    "congreso": 51
+   },
+   {
+    "anio": 1985,
+    "rango": "ley_organica",
+    "boe": 14,
+    "congreso": 14
+   },
+   {
+    "anio": 1985,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1986,
+    "rango": "rdl",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 1986,
+    "rango": "ley",
+    "boe": 25,
+    "congreso": 25
+   },
+   {
+    "anio": 1986,
+    "rango": "ley_organica",
+    "boe": 4,
+    "congreso": 4
+   },
+   {
+    "anio": 1986,
+    "rango": "rdleg",
+    "boe": 15,
+    "congreso": 1
+   },
+   {
+    "anio": 1987,
+    "rango": "rdl",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 1987,
+    "rango": "ley",
+    "boe": 34,
+    "congreso": 34
+   },
+   {
+    "anio": 1987,
+    "rango": "ley_organica",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 1987,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1988,
+    "rango": "rdl",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 1988,
+    "rango": "ley",
+    "boe": 44,
+    "congreso": 44
+   },
+   {
+    "anio": 1988,
+    "rango": "ley_organica",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 1988,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1989,
+    "rango": "rdl",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 1989,
+    "rango": "ley",
+    "boe": 20,
+    "congreso": 20
+   },
+   {
+    "anio": 1989,
+    "rango": "ley_organica",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 1989,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1990,
+    "rango": "rdl",
+    "boe": 6,
+    "congreso": 6
+   },
+   {
+    "anio": 1990,
+    "rango": "ley",
+    "boe": 31,
+    "congreso": 31
+   },
+   {
+    "anio": 1990,
+    "rango": "ley_organica",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1990,
+    "rango": "rdleg",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 1991,
+    "rango": "rdl",
+    "boe": 5,
+    "congreso": 5
+   },
+   {
+    "anio": 1991,
+    "rango": "ley",
+    "boe": 30,
+    "congreso": 31
+   },
+   {
+    "anio": 1991,
+    "rango": "ley_organica",
+    "boe": 12,
+    "congreso": 13
+   },
+   {
+    "anio": 1991,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1992,
+    "rango": "rdl",
+    "boe": 6,
+    "congreso": 6
+   },
+   {
+    "anio": 1992,
+    "rango": "ley",
+    "boe": 39,
+    "congreso": 39
+   },
+   {
+    "anio": 1992,
+    "rango": "ley_organica",
+    "boe": 10,
+    "congreso": 10
+   },
+   {
+    "anio": 1992,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1993,
+    "rango": "rdl",
+    "boe": 22,
+    "congreso": 22
+   },
+   {
+    "anio": 1993,
+    "rango": "ley",
+    "boe": 23,
+    "congreso": 23
+   },
+   {
+    "anio": 1993,
+    "rango": "ley_organica",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 1993,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1994,
+    "rango": "rdl",
+    "boe": 13,
+    "congreso": 13
+   },
+   {
+    "anio": 1994,
+    "rango": "ley",
+    "boe": 43,
+    "congreso": 43
+   },
+   {
+    "anio": 1994,
+    "rango": "ley_organica",
+    "boe": 20,
+    "congreso": 20
+   },
+   {
+    "anio": 1994,
+    "rango": "rdleg",
+    "boe": 2,
+    "congreso": 2
+   },
+   {
+    "anio": 1995,
+    "rango": "rdl",
+    "boe": 12,
+    "congreso": 12
+   },
+   {
+    "anio": 1995,
+    "rango": "ley",
+    "boe": 44,
+    "congreso": 44
+   },
+   {
+    "anio": 1995,
+    "rango": "ley_organica",
+    "boe": 16,
+    "congreso": 16
+   },
+   {
+    "anio": 1995,
+    "rango": "rdleg",
+    "boe": 2,
+    "congreso": 2
+   },
+   {
+    "anio": 1996,
+    "rango": "rdl",
+    "boe": 17,
+    "congreso": 17
+   },
+   {
+    "anio": 1996,
+    "rango": "ley",
+    "boe": 14,
+    "congreso": 14
+   },
+   {
+    "anio": 1996,
+    "rango": "ley_organica",
+    "boe": 5,
+    "congreso": 5
+   },
+   {
+    "anio": 1996,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 1997,
+    "rango": "rdl",
+    "boe": 29,
+    "congreso": 29
+   },
+   {
+    "anio": 1997,
+    "rango": "ley",
+    "boe": 66,
+    "congreso": 66
+   },
+   {
+    "anio": 1997,
+    "rango": "ley_organica",
+    "boe": 6,
+    "congreso": 6
+   },
+   {
+    "anio": 1997,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 1998,
+    "rango": "rdl",
+    "boe": 20,
+    "congreso": 20
+   },
+   {
+    "anio": 1998,
+    "rango": "ley",
+    "boe": 49,
+    "congreso": 50
+   },
+   {
+    "anio": 1998,
+    "rango": "ley_organica",
+    "boe": 11,
+    "congreso": 11
+   },
+   {
+    "anio": 1998,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 1999,
+    "rango": "rdl",
+    "boe": 22,
+    "congreso": 22
+   },
+   {
+    "anio": 1999,
+    "rango": "ley",
+    "boe": 55,
+    "congreso": 55
+   },
+   {
+    "anio": 1999,
+    "rango": "ley_organica",
+    "boe": 15,
+    "congreso": 15
+   },
+   {
+    "anio": 1999,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 2000,
+    "rango": "rdl",
+    "boe": 10,
+    "congreso": 10
+   },
+   {
+    "anio": 2000,
+    "rango": "ley",
+    "boe": 14,
+    "congreso": 14
+   },
+   {
+    "anio": 2000,
+    "rango": "ley_organica",
+    "boe": 9,
+    "congreso": 9
+   },
+   {
+    "anio": 2000,
+    "rango": "rdleg",
+    "boe": 5,
+    "congreso": 5
+   },
+   {
+    "anio": 2001,
+    "rango": "rdl",
+    "boe": 16,
+    "congreso": 16
+   },
+   {
+    "anio": 2001,
+    "rango": "ley",
+    "boe": 26,
+    "congreso": 26
+   },
+   {
+    "anio": 2001,
+    "rango": "ley_organica",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 2001,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 2002,
+    "rango": "rdl",
+    "boe": 10,
+    "congreso": 10
+   },
+   {
+    "anio": 2002,
+    "rango": "ley",
+    "boe": 53,
+    "congreso": 53
+   },
+   {
+    "anio": 2002,
+    "rango": "ley_organica",
+    "boe": 10,
+    "congreso": 10
+   },
+   {
+    "anio": 2002,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 2003,
+    "rango": "rdl",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 2003,
+    "rango": "ley",
+    "boe": 62,
+    "congreso": 62
+   },
+   {
+    "anio": 2003,
+    "rango": "ley_organica",
+    "boe": 20,
+    "congreso": 20
+   },
+   {
+    "anio": 2003,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2004,
+    "rango": "rdl",
+    "boe": 11,
+    "congreso": 11
+   },
+   {
+    "anio": 2004,
+    "rango": "ley",
+    "boe": 4,
+    "congreso": 4
+   },
+   {
+    "anio": 2004,
+    "rango": "ley_organica",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 2004,
+    "rango": "rdleg",
+    "boe": 8,
+    "congreso": 8
+   },
+   {
+    "anio": 2005,
+    "rango": "rdl",
+    "boe": 16,
+    "congreso": 16
+   },
+   {
+    "anio": 2005,
+    "rango": "ley",
+    "boe": 30,
+    "congreso": 30
+   },
+   {
+    "anio": 2005,
+    "rango": "ley_organica",
+    "boe": 6,
+    "congreso": 6
+   },
+   {
+    "anio": 2005,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2006,
+    "rango": "rdl",
+    "boe": 13,
+    "congreso": 13
+   },
+   {
+    "anio": 2006,
+    "rango": "ley",
+    "boe": 44,
+    "congreso": 44
+   },
+   {
+    "anio": 2006,
+    "rango": "ley_organica",
+    "boe": 8,
+    "congreso": 8
+   },
+   {
+    "anio": 2006,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2007,
+    "rango": "rdl",
+    "boe": 11,
+    "congreso": 11
+   },
+   {
+    "anio": 2007,
+    "rango": "ley",
+    "boe": 56,
+    "congreso": 56
+   },
+   {
+    "anio": 2007,
+    "rango": "ley_organica",
+    "boe": 16,
+    "congreso": 16
+   },
+   {
+    "anio": 2007,
+    "rango": "rdleg",
+    "boe": 2,
+    "congreso": 2
+   },
+   {
+    "anio": 2008,
+    "rango": "rdl",
+    "boe": 10,
+    "congreso": 10
+   },
+   {
+    "anio": 2008,
+    "rango": "ley",
+    "boe": 4,
+    "congreso": 4
+   },
+   {
+    "anio": 2008,
+    "rango": "ley_organica",
+    "boe": 2,
+    "congreso": 2
+   },
+   {
+    "anio": 2008,
+    "rango": "rdleg",
+    "boe": 2,
+    "congreso": 2
+   },
+   {
+    "anio": 2009,
+    "rango": "rdl",
+    "boe": 14,
+    "congreso": 14
+   },
+   {
+    "anio": 2009,
+    "rango": "ley",
+    "boe": 29,
+    "congreso": 29
+   },
+   {
+    "anio": 2009,
+    "rango": "ley_organica",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 2009,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2010,
+    "rango": "rdl",
+    "boe": 14,
+    "congreso": 14
+   },
+   {
+    "anio": 2010,
+    "rango": "ley",
+    "boe": 44,
+    "congreso": 44
+   },
+   {
+    "anio": 2010,
+    "rango": "ley_organica",
+    "boe": 9,
+    "congreso": 9
+   },
+   {
+    "anio": 2010,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 2011,
+    "rango": "rdl",
+    "boe": 20,
+    "congreso": 20
+   },
+   {
+    "anio": 2011,
+    "rango": "ley",
+    "boe": 38,
+    "congreso": 38
+   },
+   {
+    "anio": 2011,
+    "rango": "ley_organica",
+    "boe": 12,
+    "congreso": 12
+   },
+   {
+    "anio": 2011,
+    "rango": "rdleg",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 2012,
+    "rango": "rdl",
+    "boe": 29,
+    "congreso": 29
+   },
+   {
+    "anio": 2012,
+    "rango": "ley",
+    "boe": 17,
+    "congreso": 17
+   },
+   {
+    "anio": 2012,
+    "rango": "ley_organica",
+    "boe": 8,
+    "congreso": 8
+   },
+   {
+    "anio": 2012,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2013,
+    "rango": "rdl",
+    "boe": 17,
+    "congreso": 17
+   },
+   {
+    "anio": 2013,
+    "rango": "ley",
+    "boe": 27,
+    "congreso": 27
+   },
+   {
+    "anio": 2013,
+    "rango": "ley_organica",
+    "boe": 9,
+    "congreso": 9
+   },
+   {
+    "anio": 2013,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 2014,
+    "rango": "rdl",
+    "boe": 17,
+    "congreso": 17
+   },
+   {
+    "anio": 2014,
+    "rango": "ley",
+    "boe": 36,
+    "congreso": 36
+   },
+   {
+    "anio": 2014,
+    "rango": "ley_organica",
+    "boe": 8,
+    "congreso": 8
+   },
+   {
+    "anio": 2014,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2015,
+    "rango": "rdl",
+    "boe": 12,
+    "congreso": 12
+   },
+   {
+    "anio": 2015,
+    "rango": "ley",
+    "boe": 48,
+    "congreso": 48
+   },
+   {
+    "anio": 2015,
+    "rango": "ley_organica",
+    "boe": 16,
+    "congreso": 16
+   },
+   {
+    "anio": 2015,
+    "rango": "rdleg",
+    "boe": 8,
+    "congreso": 8
+   },
+   {
+    "anio": 2016,
+    "rango": "rdl",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 2016,
+    "rango": "ley",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2016,
+    "rango": "ley_organica",
+    "boe": 2,
+    "congreso": 2
+   },
+   {
+    "anio": 2016,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 2017,
+    "rango": "rdl",
+    "boe": 21,
+    "congreso": 21
+   },
+   {
+    "anio": 2017,
+    "rango": "ley",
+    "boe": 12,
+    "congreso": 12
+   },
+   {
+    "anio": 2017,
+    "rango": "ley_organica",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 2017,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2018,
+    "rango": "rdl",
+    "boe": 28,
+    "congreso": 28
+   },
+   {
+    "anio": 2018,
+    "rango": "ley",
+    "boe": 11,
+    "congreso": 11
+   },
+   {
+    "anio": 2018,
+    "rango": "ley_organica",
+    "boe": 5,
+    "congreso": 5
+   },
+   {
+    "anio": 2018,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2019,
+    "rango": "rdl",
+    "boe": 18,
+    "congreso": 18
+   },
+   {
+    "anio": 2019,
+    "rango": "ley",
+    "boe": 5,
+    "congreso": 5
+   },
+   {
+    "anio": 2019,
+    "rango": "ley_organica",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 2019,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2020,
+    "rango": "rdl",
+    "boe": 39,
+    "congreso": 39
+   },
+   {
+    "anio": 2020,
+    "rango": "ley",
+    "boe": 11,
+    "congreso": 11
+   },
+   {
+    "anio": 2020,
+    "rango": "ley_organica",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 2020,
+    "rango": "rdleg",
+    "boe": 1,
+    "congreso": 1
+   },
+   {
+    "anio": 2021,
+    "rango": "rdl",
+    "boe": 32,
+    "congreso": 32
+   },
+   {
+    "anio": 2021,
+    "rango": "ley",
+    "boe": 22,
+    "congreso": 22
+   },
+   {
+    "anio": 2021,
+    "rango": "ley_organica",
+    "boe": 11,
+    "congreso": 11
+   },
+   {
+    "anio": 2021,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2022,
+    "rango": "rdl",
+    "boe": 20,
+    "congreso": 20
+   },
+   {
+    "anio": 2022,
+    "rango": "ley",
+    "boe": 39,
+    "congreso": 39
+   },
+   {
+    "anio": 2022,
+    "rango": "ley_organica",
+    "boe": 15,
+    "congreso": 15
+   },
+   {
+    "anio": 2022,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2023,
+    "rango": "rdl",
+    "boe": 8,
+    "congreso": 8
+   },
+   {
+    "anio": 2023,
+    "rango": "ley",
+    "boe": 13,
+    "congreso": 13
+   },
+   {
+    "anio": 2023,
+    "rango": "ley_organica",
+    "boe": 4,
+    "congreso": 4
+   },
+   {
+    "anio": 2023,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2024,
+    "rango": "rdl",
+    "boe": 11,
+    "congreso": 11
+   },
+   {
+    "anio": 2024,
+    "rango": "ley",
+    "boe": 7,
+    "congreso": 7
+   },
+   {
+    "anio": 2024,
+    "rango": "ley_organica",
+    "boe": 6,
+    "congreso": 6
+   },
+   {
+    "anio": 2024,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   },
+   {
+    "anio": 2025,
+    "rango": "rdl",
+    "boe": 17,
+    "congreso": 17
+   },
+   {
+    "anio": 2025,
+    "rango": "ley",
+    "boe": 10,
+    "congreso": 10
+   },
+   {
+    "anio": 2025,
+    "rango": "ley_organica",
+    "boe": 3,
+    "congreso": 3
+   },
+   {
+    "anio": 2025,
+    "rango": "rdleg",
+    "boe": 0,
+    "congreso": 0
+   }
+  ],
+  "dias_hasta_publicacion": {
+   "4": 61,
+   "5": 24,
+   "12": 3,
+   "10": 6,
+   "13": 4,
+   "14": 4,
+   "18": 2,
+   "8": 9,
+   "1": 534,
+   "6": 19,
+   "11": 6,
+   "29": 1,
+   "3": 24,
+   "2": 24,
+   "26": 2,
+   "34": 1,
+   "7": 11,
+   "20": 1,
+   "39": 1,
+   "9": 4,
+   "15": 4,
+   "46": 1,
+   "19": 2,
+   "27": 1,
+   "17": 3,
+   "21": 1,
+   "24": 1,
+   "16": 2,
+   "0": 9
+  },
+  "serie": {
+   "dias": 17499,
+   "dias_con_rdl": 600,
+   "max_dia": 6,
+   "max_m30": 14
+  },
+  "convalidacion": {
+   "convalidado": 737,
+   "derogado": 19,
+   "pendiente": 9
+  },
+  "tramitado_pl": {
+   "no": 501,
+   "si": 251,
+   "pendiente": 13
+  },
+  "resultado_pl": {
+   "aprobado": 106,
+   "caducado": 129,
+   "subsumido": 5
+  },
+  "fase": {
+   "ordinaria": 697,
+   "cortes_disueltas": 52,
+   "en_funciones": 16
+  },
+  "por_gobierno": {
+   "suarez_3": 34,
+   "suarez_2": 8,
+   "calvo_sotelo": 37,
+   "gonzalez_1": 39,
+   "gonzalez_2": 21,
+   "gonzalez_3": 30,
+   "gonzalez_4": 39,
+   "aznar_1": 85,
+   "aznar_2": 42,
+   "zapatero_1": 52,
+   "zapatero_2": 56,
+   "rajoy_1": 78,
+   "rajoy_2": 29,
+   "sanchez_1": 43,
+   "sanchez_2": 96,
+   "sanchez_3": 76
+  },
+  "leyes_derivadas_identificadas": 104,
+  "pl_aprobados_procedentes_de_rdl": 106,
+  "cobertura": {
+   "listado_boe_hasta": "2026-11-25",
+   "resultado_parlamentario_hasta": "2026-11-10",
+   "est_leyes_hasta": 2025
+  }
+ }
+}

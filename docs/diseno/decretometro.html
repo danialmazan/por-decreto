@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decretómetro</title>
+<script>try { const t = localStorage.getItem("tema"); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23102a3a'/%3E%3Cpath d='M3 15h4l2-6 3 9 2-5h3' fill='none' stroke='%23f3f6f4' stroke-width='1.8' stroke-linejoin='round'/%3E%3Ccircle cx='19.5' cy='13' r='2.2' fill='%23e8a100'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+/* Claro por defecto; el oscuro sólo con el botón (se recuerda en este navegador). */
+:root, :root[data-theme="light"] { --bg:#f3f6f4; --ink:#102a3a; --muted:#4e6470; --hair:#d3ddd7; --paper-line:#dfe7e2; --band:rgba(16,42,58,.07); --seg-bg:#e4ebe7;
+  --trace:#0e5a8a; --hl:#c98600; --pen:#e8a100; --focus:#0e5a8a;
+  --cell:#e2e9e5; --h1:#fde3a7; --h2:#f9b95a; --h3:#ee8131; --h4:#d1501e; --h5:#8f2a12;
+  --p-ucd:#1f9a8a; --p-psoe:#d5373e; --p-pp:#2a62c9;
+  --f-head:"Schibsted Grotesk", system-ui, sans-serif; --f-body:"Schibsted Grotesk", system-ui, sans-serif; --w-head:800; color-scheme: light; }
+:root[data-theme="dark"] { --bg:#0e1518; --ink:#e4eef0; --muted:#9db0b8; --hair:#26343a; --paper-line:#1a262b; --band:rgba(228,238,240,.07); --seg-bg:#172328;
+  --trace:#5fb3e8; --hl:#f0b429; --pen:#f0b429; --focus:#5fb3e8;
+  --cell:#1b262a; --h1:#5a3413; --h2:#91481a; --h3:#cf6a24; --h4:#f29a45; --h5:#ffd79a;
+  --p-ucd:#1a9a8c; --p-psoe:#e05a50; --p-pp:#4c82dd; color-scheme: dark; }
+
+.hero { margin: 0 -16px; padding: 22px 16px 6px; position: relative;
+  background-image: linear-gradient(var(--paper-line) 1px, transparent 1px), linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+  background-size: 24px 24px; border-bottom: 1px solid var(--hair); }
+.reading { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; }
+.reading .big { font-weight: 800; font-size: clamp(88px, 22vw, 168px); line-height: .82; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.reading .what { font-size: clamp(18px, 3.6vw, 24px); font-weight: 600; line-height: 1.2; max-width: 22ch; padding-bottom: 6px; }
+.facts { list-style: none; padding: 0; margin: 8px 0 0; font-weight: 400; color: var(--muted); font-size: 15px; line-height: 1.45; }
+.facts b { color: var(--ink); font-weight: 600; }
+.flag { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; background: var(--pen); color: #1b1200;
+  border-radius: 999px; padding: 3px 10px 3px 8px; font-size: 13px; margin-top: 14px; }
+.flag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #1b1200; }
+.hero .chart { margin-top: 10px; }
+.hero .trace { stroke-width: 1.6; }
+.hero .seg { margin-top: 4px; }
+.chart .grid { stroke: var(--paper-line); }
+.gov { cursor: default; } .gov.on { stroke: var(--ink); stroke-width: 1.5; }
+.gbar.on { stroke: var(--ink); stroke-width: 1.5; }
+.cur.hover { stroke: var(--ink); stroke-width: 2; opacity: 1; }
+.elec { fill: var(--bg); stroke: var(--muted); stroke-width: 1.2; }
+.elecline { stroke: var(--muted); stroke-dasharray: 3 3; }
+.wk { fill: var(--cell); } .h1 { fill: var(--h1); } .h2 { fill: var(--h2); } .h3 { fill: var(--h3); } .h4 { fill: var(--h4); } .h5 { fill: var(--h5); }
+.legend { display: flex; align-items: center; gap: 5px; font-size: 13px; color: var(--muted); margin-top: 10px; flex-wrap: wrap; }
+.legend i { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.legend .party { width: 4px; border-radius: 0; margin-left: 10px; }
+.tt-h { font-weight: 700; margin-bottom: 4px; }
+.tt .row { display: flex; justify-content: space-between; gap: 14px; color: var(--muted); }
+.tt .row b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.tt .row.now span, .tt .row.near span { color: var(--ink); font-weight: 600; }
+.tt .row.now b { color: var(--hl); }
+.tt .more { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.head-row { display: flex; justify-content: space-between; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin-bottom: 6px; }
+.head-row h2 { margin: 0; }
+.head-row .seg { margin: 0; }
+h3.sub { font-size: 18px; margin: 32px 0 8px; }
+section h2 { letter-spacing: -.01em; }
+.narrow { max-width: 760px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">Decretómetro <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="var(--ink)"/><path d="M3 15h4l2-6 3 9 2-5h3" fill="none" stroke="var(--bg)" stroke-width="1.8" stroke-linejoin="round"/><circle cx="19.5" cy="13" r="2.2" fill="var(--pen)"/></svg></a>
+  <div class="tools">
+    <nav class="lang" aria-label="Idioma"><a href="#" aria-current="true" lang="es" title="Español">ES</a><a href="#" lang="en" title="English">EN</a></nav>
+    <button class="theme" data-theme-toggle aria-label="Cambiar a tema oscuro o claro" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <div class="reading">
+      <span class="big" id="big"></span>
+      <div class="what">decretos-leyes en los últimos 30 días
+        <ul class="facts" id="facts"></ul>
+      </div>
+    </div>
+    <span class="flag" id="flag"></span>
+    <div class="chart" id="tl"></div>
+    <div class="seg" data-seg id="seg-tl" role="group" aria-label="Agregación temporal">
+      <button data-v="m30" aria-pressed="true">Últimos 30 días</button><button data-v="anual" aria-pressed="false">Año natural</button>
+    </div>
+  </div>
+
+  <section>
+    <h2>Semana a semana desde 1979</h2>
+    <p class="lede" id="cal-txt"></p>
+    <div class="chart" id="cal"></div>
+    <div class="legend" aria-hidden="true">Sin decretos-leyes <i style="background:var(--cell)"></i>
+      &nbsp;1 <i style="background:var(--h1)"></i><i style="background:var(--h2)"></i><i style="background:var(--h3)"></i><i style="background:var(--h4)"></i><i style="background:var(--h5)"></i> 5 o más
+      <i class="party" style="background:var(--p-ucd)"></i>UCD <i class="party" style="background:var(--p-psoe)"></i>PSOE <i class="party" style="background:var(--p-pp)"></i>PP</div>
+    <h3 class="sub">Las 10 semanas con más decretos-leyes</h3>
+    <div class="chart" id="top"></div>
+    <p class="note" id="top-note"></p>
+  </section>
+
+  <section>
+      <div class="head-row">
+        <h2 id="fin-h">Desde la disolución de las Cortes</h2>
+        <div class="seg" data-seg id="seg-fin" role="group" aria-label="Origen del recuento">
+          <button data-v="disolucion" aria-pressed="true">Desde la disolución</button><button data-v="anuncio" aria-pressed="false">Desde el anuncio</button>
+        </div>
+      </div>
+      <p class="lede" id="fin-txt"></p>
+      <div class="chart" id="fin"></div>
+      <p class="note" id="fin-note"></p>
+    </section>
+  <section class="narrow">
+      <div class="head-row">
+        <h2>Intensidad por Gobierno</h2>
+        <div class="seg" data-seg id="seg-gov" role="group" aria-label="Orden">
+          <button data-v="intensidad" aria-pressed="true">Mayor intensidad</button><button data-v="cronologico" aria-pressed="false">Cronológico</button>
+        </div>
+      </div>
+      <p class="lede">Decretos-leyes por año de mandato efectivo. Gobiernos con al menos un año.</p>
+      <div class="chart" id="gov"></div>
+  </section>
+</main>
+<footer>
+  <a class="author" href="https://danielalmazan.com">danielalmazan.com</a>
+  <span class="credit">Daniel Almazán · Datos: <a href="#">BOE y Congreso de los Diputados</a></span>
+  <span class="fbrand">Decretómetro <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="var(--ink)"/><path d="M3 15h4l2-6 3 9 2-5h3" fill="none" stroke="var(--bg)" stroke-width="1.8" stroke-linejoin="round"/><circle cx="19.5" cy="13" r="2.2" fill="var(--pen)"/></svg></span>
+</footer>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script>
+const F = Charts.frases(), L = Charts.lectura(), d = DL.destacados;
+document.getElementById("big").textContent = L.hoy;
+document.getElementById("facts").innerHTML = [
+  `hasta el ${Charts.fmt(DL.corte)}`,
+  `<b>${F.gobierno}</b>`,
+  `${d.total} desde 1978 (${Charts.dec1(d.media_anual_historica)} al año)`,
+].map((x) => `<li>${x}</li>`).join("");
+document.getElementById("flag").textContent = L.pill;
+const conRdl = DL.semanas.length, totalSem = Math.round(DL.m30.length / 7);
+document.getElementById("cal-txt").textContent = `Cada fila es un año y cada casilla, una semana. Hubo al menos un decreto-ley en ${conRdl.toLocaleString("es-ES")} de ${totalSem.toLocaleString("es-ES")} semanas. La marca de la izquierda indica el partido del Gobierno.`;
+let mode = "m30", orden = "intensidad", origen = "disolucion";
+const NOTA = {
+  disolucion: "Decretos-leyes acumulados desde el día de la disolución (entrada en vigor del real decreto). Los círculos marcan el día de las elecciones; las curvas terminan cuando toma posesión el nuevo Gobierno o a los 120 días.",
+  anuncio: "Decretos-leyes acumulados desde el anuncio público del adelanto o de la fecha electoral; si no hay un anuncio previo documentado, desde el Consejo de Ministros que acuerda la disolución. En 2016 y en septiembre de 2019, desde el comunicado del Rey sin candidato. Fechas y fuentes en la metodología.",
+};
+const fin = () => {
+  document.getElementById("fin-h").textContent = origen === "anuncio" ? "Desde el anuncio de las elecciones" : "Desde la disolución de las Cortes";
+  document.getElementById("fin-txt").textContent = Charts.frases(origen).fin;
+  document.getElementById("fin-note").textContent = NOTA[origen];
+  Charts.finMandato(document.getElementById("fin"), origen);
+};
+const tl = () => Charts.timeline(document.getElementById("tl"), mode);
+const gv = () => Charts.govBars(document.getElementById("gov"), orden);
+const drawTop = () => {
+  const r = Charts.topWeeks(document.getElementById("top"));
+  document.getElementById("top-note").textContent = r.empatadas === 1 ? `Otra semana tiene también ${r.valor} decretos-leyes.` : r.empatadas > 1 ? `Otras ${r.empatadas} semanas tienen también ${r.valor} decretos-leyes.` : "";
+};
+const draw = () => { tl(); Charts.calendar(document.getElementById("cal")); drawTop(); fin(); gv(); };
+document.getElementById("seg-fin").addEventListener("seg", (e) => { origen = e.detail; fin(); });
+document.getElementById("seg-tl").addEventListener("seg", (e) => { mode = e.detail; tl(); });
+document.getElementById("seg-gov").addEventListener("seg", (e) => { orden = e.detail; gv(); });
+Charts.wireControls(); draw();
+let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(draw, 120); });
+</script>
+</body>
+</html>

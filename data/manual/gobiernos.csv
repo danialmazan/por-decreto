@@ -1,0 +1,17 @@
+gobierno_id,presidente,presidente_id,partidos,legislatura_formacion,fecha_inicio,rd_nombramiento,fuente_inicio,nota,inicio_funciones_manual,fuente_funciones
+suarez_2,Adolfo Suárez González,suarez,UCD,0,1977-07-04,,La Moncloa (Gobiernos de la democracia),"Gobierno anterior a la Constitución; solo se usa su tramo desde el 29/12/1978. Fecha de inicio pendiente de verificar con el BOE; no afecta a ninguna métrica porque la serie empieza el 29/12/1978.",,
+suarez_3,Adolfo Suárez González,suarez,UCD,1,1979-03-31,BOE-A-1979-9031,BOE,,1981-01-29,https://www.lamoncloa.gob.es/presidente/presidentes/Paginas/Suarez_BIO.aspx
+calvo_sotelo,Leopoldo Calvo-Sotelo y Bustelo,calvo_sotelo,UCD,1,1981-02-25,BOE-A-1981-4590,BOE,,,
+gonzalez_1,Felipe González Márquez,gonzalez,PSOE,2,1982-12-01,BOE-A-1982-31635,BOE,,,
+gonzalez_2,Felipe González Márquez,gonzalez,PSOE,3,1986-07-23,BOE-A-1986-19914,BOE,,,
+gonzalez_3,Felipe González Márquez,gonzalez,PSOE,4,1989-12-05,BOE-A-1989-28901,BOE,,,
+gonzalez_4,Felipe González Márquez,gonzalez,PSOE,5,1993-07-09,BOE-A-1993-18045,BOE,,,
+aznar_1,José María Aznar López,aznar,PP,6,1996-05-04,BOE-A-1996-9942,BOE,,,
+aznar_2,José María Aznar López,aznar,PP,7,2000-04-26,BOE-A-2000-7840,BOE,,,
+zapatero_1,José Luis Rodríguez Zapatero,zapatero,PSOE,8,2004-04-16,BOE-A-2004-6855,BOE,,,
+zapatero_2,José Luis Rodríguez Zapatero,zapatero,PSOE,9,2008-04-11,BOE-A-2008-6470,BOE,,,
+rajoy_1,Mariano Rajoy Brey,rajoy,PP,10,2011-12-20,BOE-A-2011-19861,BOE,"En funciones desde las elecciones del 20/12/2015 hasta el 30/10/2016 (dos elecciones).",,
+rajoy_2,Mariano Rajoy Brey,rajoy,PP,12,2016-10-30,BOE-A-2016-9962,BOE,Termina por moción de censura (01/06/2018).,,
+sanchez_1,Pedro Sánchez Pérez-Castejón,sanchez,PSOE,12,2018-06-01,BOE-A-2018-7400,BOE,"Formado tras moción de censura; en funciones desde las elecciones del 28/04/2019 hasta el 07/01/2020 (dos elecciones).",,
+sanchez_2,Pedro Sánchez Pérez-Castejón,sanchez,PSOE;UP,14,2020-01-07,BOE-A-2020-231,BOE,Coalición PSOE–Unidas Podemos.,,
+sanchez_3,Pedro Sánchez Pérez-Castejón,sanchez,PSOE;SUMAR,15,2023-11-16,BOE-A-2023-23302,BOE,Coalición PSOE–Sumar.,,

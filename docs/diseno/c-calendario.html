@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artículo 86 · dirección C «Calendario»</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23f6f7f9'/%3E%3Cg fill='%23d3d9e2'%3E%3Crect x='4' y='4' width='4' height='4' rx='1'/%3E%3Crect x='10' y='4' width='4' height='4' rx='1'/%3E%3Crect x='4' y='10' width='4' height='4' rx='1'/%3E%3Crect x='16' y='10' width='4' height='4' rx='1'/%3E%3Crect x='10' y='16' width='4' height='4' rx='1'/%3E%3Crect x='16' y='16' width='4' height='4' rx='1'/%3E%3C/g%3E%3Cg fill='%23173f7a'%3E%3Crect x='16' y='4' width='4' height='4' rx='1'/%3E%3Crect x='10' y='10' width='4' height='4' rx='1'/%3E%3Crect x='4' y='16' width='4' height='4' rx='1'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root { --bg:#f6f7f9; --ink:#18212e; --muted:#566273; --hair:#dce1e8; --band:rgba(23,63,122,.07); --seg-bg:#e7ebf0;
+  --trace:#2f6fb5; --hl:#173f7a; --cell:#e2e6ec; --w1:#b7d0ea; --w2:#78a9da; --w3:#2f6fb5; --w4:#173f7a; --focus:#2f6fb5;
+  --f-head:"Public Sans", system-ui, sans-serif; --f-body:"Public Sans", system-ui, sans-serif; --w-head:800; }
+:root[data-theme="dark"] { --bg:#11151b; --ink:#e7ecf2; --muted:#9aa7b7; --hair:#262e39; --band:rgba(231,236,242,.07); --seg-bg:#1b222b;
+  --trace:#6aa0db; --hl:#b3d3f5; --cell:#1f2731; --w1:#29486d; --w2:#3d6fa8; --w3:#6aa0db; --w4:#b3d3f5; --focus:#6aa0db; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#11151b; --ink:#e7ecf2; --muted:#9aa7b7; --hair:#262e39; --band:rgba(231,236,242,.07); --seg-bg:#1b222b;
+  --trace:#6aa0db; --hl:#b3d3f5; --cell:#1f2731; --w1:#29486d; --w2:#3d6fa8; --w3:#6aa0db; --w4:#b3d3f5; --focus:#6aa0db; } }
+
+.hero { margin-top: 28px; }
+.hero h1 { font-weight: 800; font-size: clamp(30px, 6.4vw, 52px); line-height: 1.04; letter-spacing: -.02em; margin: 0; max-width: 18ch; }
+.hero p { color: var(--muted); font-size: 18px; max-width: 52ch; margin: 14px 0 0; }
+.cal { margin-top: 22px; }
+.wk { fill: var(--cell); } .w1 { fill: var(--w1); } .w2 { fill: var(--w2); } .w3 { fill: var(--w3); } .w4 { fill: var(--w4); }
+.legend { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); margin-top: 10px; flex-wrap: wrap; }
+.legend i { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.legend .gap { width: 14px; }
+.legend .party { width: 4px; height: 12px; border-radius: 0; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">Artículo 86 <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="var(--seg-bg)"/><g fill="var(--cell)"><rect x="4" y="4" width="4" height="4" rx="1"/><rect x="10" y="4" width="4" height="4" rx="1"/><rect x="4" y="10" width="4" height="4" rx="1"/><rect x="16" y="10" width="4" height="4" rx="1"/><rect x="10" y="16" width="4" height="4" rx="1"/><rect x="16" y="16" width="4" height="4" rx="1"/></g><g fill="var(--w4)"><rect x="16" y="4" width="4" height="4" rx="1"/><rect x="10" y="10" width="4" height="4" rx="1"/><rect x="4" y="16" width="4" height="4" rx="1"/></g></svg></a>
+  <div class="tools">
+    <nav class="lang" aria-label="Idioma"><a href="#" aria-current="true" lang="es" title="Español">ES</a><a href="#" lang="en" title="English">EN</a></nav>
+    <button class="theme" data-theme-toggle aria-label="Cambiar tema claro u oscuro" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <h1 id="h1"></h1>
+    <p id="sub"></p>
+    <div class="chart cal" id="cal"></div>
+    <div class="legend" aria-hidden="true"><span>Semanas sin decretos-leyes</span><i style="background:var(--cell)"></i><span class="gap"></span>
+      <span>1</span><i style="background:var(--w1)"></i><i style="background:var(--w2)"></i><i style="background:var(--w3)"></i><i style="background:var(--w4)"></i><span>4 o más</span>
+      <span class="gap"></span><i class="party" style="background:var(--p-ucd)"></i>UCD <i class="party" style="background:var(--p-psoe)"></i>PSOE <i class="party" style="background:var(--p-pp)"></i>PP</div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+    <h2>La misma historia, día a día</h2>
+    <p class="lede">Decretos-leyes aprobados en los 30 días anteriores a cada fecha. Las franjas grises marcan las Cortes disueltas.</p>
+    <div class="seg" data-seg id="seg-tl" role="group" aria-label="Agregación temporal">
+      <button data-v="m30" aria-pressed="true">Últimos 30 días</button><button data-v="anual" aria-pressed="false">Año natural</button>
+    </div>
+    <div class="chart" id="tl"></div>
+  </section>
+
+  <div class="cols">
+    <section>
+      <h2>Con las Cortes disueltas</h2>
+      <p class="lede" id="fin-txt"></p>
+      <div class="chart" id="fin"></div>
+    </section>
+    <section>
+      <h2>Intensidad por Gobierno</h2>
+      <p class="lede">Decretos-leyes por año de mandato efectivo. Gobiernos con al menos un año.</p>
+      <div class="chart" id="gov"></div>
+    </section>
+  </div>
+</main>
+<footer>
+  <a class="author" href="https://danielalmazan.com">danielalmazan.com</a>
+  <span class="credit">Daniel Almazán · Datos: <a href="#">BOE y Congreso de los Diputados</a></span>
+  <span class="fbrand">Artículo 86</span>
+</footer>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script>
+const F = Charts.frases(), d = DL.destacados;
+const sem = DL.semanas.length, totalSem = Math.round(DL.m30.length / 7);
+document.getElementById("h1").textContent = `${d.total} decretos-leyes en ${totalSem.toLocaleString("es-ES")} semanas de democracia`;
+document.getElementById("sub").textContent = `El Gobierno aprobó al menos uno en ${sem.toLocaleString("es-ES")} semanas. Cada fila es un año y cada casilla, una semana. La marca a la izquierda indica el partido del Gobierno.`;
+document.getElementById("kpis").innerHTML = [
+  [d.ultimos_30d, "en los últimos 30 días (récord)"], [d.ultimos_365d, "en los últimos 365 días"],
+  [String(d.media_anual_historica).replace(".", ","), "de media al año"], [d.record_dia, "récord en un solo día (23 jun 2000)"],
+].map(([v, t]) => `<div class="kpi"><b>${v}</b><span>${t}</span></div>`).join("");
+document.getElementById("fin-txt").textContent = F.fin;
+let mode = "m30";
+const draw = () => { Charts.calendar(document.getElementById("cal")); Charts.timeline(document.getElementById("tl"), mode); Charts.finMandato(document.getElementById("fin")); Charts.govBars(document.getElementById("gov")); };
+document.getElementById("seg-tl").addEventListener("seg", (e) => { mode = e.detail; Charts.timeline(document.getElementById("tl"), mode); });
+Charts.wireControls(); draw(); addEventListener("resize", draw);
+</script>
+</body>
+</html>

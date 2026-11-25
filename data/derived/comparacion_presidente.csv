@@ -1,0 +1,8 @@
+id,etiqueta,n,dias_exposicion,media_semanal,media_mensual,media_anualizada,max_semana,max_semana_id,max_mes,max_mes_id,max_30d,max_30d_fin,semanas_completas,pct_semanas_sin_rdl,meses_completos,pct_meses_sin_rdl,dias_entre_aprobaciones_media,dias_entre_aprobaciones_mediana,dias_con_rdl
+suarez,Adolfo Suárez González,42,789,0.3726,1.6202,19.443,5,1979-W04,6,1979-01,7,1979-01-26,112,76.8,25,24.0,28.8,21.5,27
+calvo_sotelo,Leopoldo Calvo-Sotelo y Bustelo,37,644,0.4022,1.7487,20.985,4,1981-W34,5,1982-09,7,1982-09-24,91,72.5,21,14.3,24.9,21,26
+gonzalez,Felipe González Márquez,129,4903,0.1842,0.8008,9.61,3,1982-W52,6,1993-12,6,1993-12-29,699,84.4,161,48.4,44.8,31.0,109
+aznar,José María Aznar López,127,2904,0.3061,1.3311,15.973,6,2000-W25,8,1997-12,10,1997-12-12,414,77.5,94,37.2,29.4,21,94
+zapatero,José Luis Rodríguez Zapatero,108,2804,0.2696,1.1723,14.068,3,2006-W52,4,2008-10,6,2011-09-16,400,77.3,91,30.8,30.4,21,92
+rajoy,Mariano Rajoy Brey,107,2355,0.318,1.3829,16.595,3,2012-W10,9,2012-03,9,2012-03-30,335,74.6,77,31.2,26.8,14.0,87
+sanchez,Pedro Sánchez Pérez-Castejón,215,3100,0.4855,2.111,25.332,5,2026-W47,14,2026-11,14,2026-11-24,442,64.9,101,22.8,18.8,12.0,165
