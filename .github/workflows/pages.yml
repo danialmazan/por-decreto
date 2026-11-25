@@ -1,4 +1,4 @@
-name: Validar y publicar Decretómetro
+name: Validar y publicar Por decreto
 on:
   push:
     branches: [main]

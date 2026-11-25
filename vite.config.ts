@@ -3,9 +3,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "node:url";
 
-// GitHub Pages: https://<usuario>.github.io/decretometro/ (se puede cambiar con BASE_PATH)
+// GitHub Pages: https://<usuario>.github.io/por-decreto/ (se puede cambiar con BASE_PATH)
 export default defineConfig({
-  base: process.env.BASE_PATH ?? "/decretometro/",
+  base: process.env.BASE_PATH ?? "/por-decreto/",
   plugins: [react()],
   build: {
     target: "es2022",

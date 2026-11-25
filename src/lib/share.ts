@@ -183,7 +183,7 @@ export async function compartirGrafico(chart: HTMLElement, c: Contexto) {
 
   const blob = await new Promise<Blob | null>((ok) => cv.toBlob(ok, "image/png"));
   if (!blob) return;
-  const nombre = `decretometro-${c.seccion || "grafico"}.png`;
+  const nombre = `por-decreto-${c.seccion || "grafico"}.png`;
   const file = new File([blob], nombre, { type: "image/png" });
   const enlace = `${ORIGEN}${base}${location.search}${c.seccion ? `#${c.seccion}` : ""}`;
   if (navigator.canShare?.({ files: [file] })) {

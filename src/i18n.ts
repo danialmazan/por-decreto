@@ -24,7 +24,7 @@ export const iso = fromDay;
 export const PARTIDO: Record<string, string> = { UCD: "UCD", PSOE: "PSOE", PP: "PP", UP: "Unidas Podemos", SUMAR: "Sumar" };
 
 const es = {
-    titulo: "Decretómetro",
+    titulo: "Por decreto",
     tema: "Cambiar entre tema claro y oscuro",
     idioma: "Idioma",
     cargando: "Cargando datos…",
@@ -193,7 +193,7 @@ const es = {
     mandatos: { corto: "Gobiernos", titulo: "Gobiernos y presidentes", intro: "Comparación a igualdad de tiempo, perfil de cada mandato y relación con la mayoría parlamentaria." },
     elecciones: { corto: "Elecciones", titulo: "Con las elecciones convocadas", intro: "Qué ocurre desde el anuncio electoral y la disolución de las Cortes." },
     congreso: { corto: "Congreso", titulo: "Qué hace el Congreso", intro: "Convalidación, derogación y tramitación como proyecto de ley." },
-    normas: { corto: "Por decreto", titulo: "Gobernar por decreto", intro: "El peso de los decretos-leyes entre las normas con rango de ley." },
+    normas: { corto: "Normas", titulo: "Gobernar por decreto", intro: "El peso de los decretos-leyes entre las normas con rango de ley." },
     "contexto-cap": { corto: "Contexto", titulo: "Contexto", intro: "Crisis, catástrofes y periodos de bloqueo que coinciden con más decretos-leyes." },
     datos: { corto: "Datos", titulo: "Datos y método", intro: "Todos los decretos-leyes, fuentes, definiciones y límites." },
   },
@@ -371,7 +371,7 @@ const en: typeof es = {
     mandatos: { corto: "Governments", titulo: "Governments and prime ministers", intro: "Like-for-like comparison, profile of each term and link with parliamentary majorities." },
     elecciones: { corto: "Elections", titulo: "Once elections are called", intro: "What happens from the election announcement and the dissolution of the Cortes." },
     congreso: { corto: "Congress", titulo: "What Congress does", intro: "Validation, repeal and processing as a bill." },
-    normas: { corto: "By decree", titulo: "Governing by decree", intro: "The weight of decree-laws among norms with the force of law." },
+    normas: { corto: "Laws", titulo: "Governing by decree", intro: "The weight of decree-laws among norms with the force of law." },
     "contexto-cap": { corto: "Context", titulo: "Context", intro: "Crises, disasters and deadlocks that coincide with more decree-laws." },
     datos: { corto: "Data", titulo: "Data and method", intro: "Every decree-law, sources, definitions and limits." },
   },

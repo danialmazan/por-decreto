@@ -1,4 +1,4 @@
-# Decretómetro
+# Por decreto
 
 El decreto-ley en la democracia española: base de datos y web sobre el uso del real decreto-ley desde la entrada en vigor de la Constitución (29/12/1978).
 
@@ -9,7 +9,7 @@ Vite + React + TypeScript, sin librerías de gráficos (SVG propio). Español en
 ```bash
 npm install
 npm run data      # exporta data/clean + data/derived → public/data (JSON y CSV)
-npm run dev       # http://127.0.0.1:5173/decretometro/
+npm run dev       # http://127.0.0.1:5173/por-decreto/
 npm run build     # dist/ (base configurable con BASE_PATH)
 npm test          # vitest + unittest del pipeline
 ```

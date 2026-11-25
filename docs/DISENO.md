@@ -10,10 +10,10 @@ Después abre <http://localhost:8765/diseno/>. Si cambian los datos, se regenera
 
 ## 0. Decisiones tomadas (revisión del 25/11/2026)
 
-La maqueta consolidada es `docs/diseno/decretometro.html`.
+La maqueta consolidada es `docs/diseno/por-decreto.html`.
 
 - **Identidad:** dirección **B · Pulso**.
-- **Nombre:** **Decretómetro**, también en inglés.
+- **Nombre:** **Por decreto**, también en inglés. Hasta el 25/11/2026 se llamó «Decretómetro», pero se cambió porque Civio ya tiene una herramienta con ese nombre sobre decretos-leyes (civio.es/el-boe-nuestro-de-cada-dia/decretometro/).
 - **Modo claro por defecto.** El oscuro solo se activa con el botón y se recuerda en el navegador.
 - **Orden de la página:** sismógrafo primero (es la entrada), después el calendario semanal, «Desde la disolución de las Cortes» e intensidad por Gobierno. Sin sumario: lo más visual y directo posible.
 - **Contador inicial:**
@@ -48,7 +48,7 @@ La maqueta consolidada es `docs/diseno/decretometro.html`.
 | Decisión | Opciones | Recomendación |
 |---|---|---|
 | Dirección visual (elegida: **B**) | A Boletín · B Pulso · C Calendario | **A con la entrada de C**: la identidad del BOE (cabecera con «Núm.», sumario y sellos) y, como primera visualización, el calendario semanal, que muestra toda la historia en una pantalla de móvil. Debajo, el timeline interactivo. |
-| Nombre (elegido: **Decretómetro**) | Por decreto · Artículo 86 · Decretómetro · Urgente · Ritmo de decreto | **Por decreto** / *By Decree* (alternativa neutra: Artículo 86) |
+| Nombre (elegido primero: Decretómetro; definitivo: **Por decreto**) | Por decreto · Artículo 86 · Decretómetro · Urgente · Ritmo de decreto | **Por decreto** / *By Decree* (alternativa neutra: Artículo 86) |
 | Exposición mínima para los rankings | 0 / 180 / 365 días | **365 días**, con un interruptor «incluir mandatos cortos» |
 | Último hito en los perfiles | 4 años / 1.400 días / fin de mandato | **1.400 días** y «fin de mandato» |
 | Coaliciones en la vista por partido | Partido del presidente / categoría propia | **Partido del presidente**, con una nota y el socio indicado en la ficha del Gobierno |
